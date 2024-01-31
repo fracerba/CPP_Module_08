@@ -1,15 +1,15 @@
 #include "easyfind.hpp"
 
-template <typename T> int easyfind(T& a, int i)
+template <typename T> bool easyfind(T& a, int i)
 {
     typename T::iterator it = std::find(a.begin(), a.end(), i);
 
     if (it != a.end())
     {
-        std::cout << "Found " << i << "at " << *it <<std::endl;
-        return *it;
+        std::cout << "Found " << i << " at " << *it <<std::endl;
+        return true;
     }
-    // else
-    //     throw std::exception();
-    return 0;
+    else
+        throw std::runtime_error("Value not found");
+    return false;
 }

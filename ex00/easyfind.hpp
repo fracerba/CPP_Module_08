@@ -2,8 +2,10 @@
 #define EASYFIND_HPP
 
 #include <iostream>
+#include <algorithm>
+#include <exception>
 
-template <typename T> int easyfind(T& a, int i);
+template <typename T> bool easyfind(T& a, int i);
 
 #include "easyfind.tpp"
 
