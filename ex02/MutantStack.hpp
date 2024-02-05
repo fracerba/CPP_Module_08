@@ -15,7 +15,6 @@ class MutantStack : public std::stack<C>
 {
     public:
         MutantStack();
-        MutantStack(unsigned int i);
         MutantStack(const MutantStack &New);
         ~MutantStack();
         MutantStack& operator=(const MutantStack &New);
@@ -27,12 +26,12 @@ class MutantStack : public std::stack<C>
 
         iterator begin();
         iterator end();
-        const_iterator begin() const;
-        const_iterator end() const;
+        const_iterator cbegin() const;
+        const_iterator cend() const;
         reverse_iterator rbegin();
         reverse_iterator rend();
-        const_reverse_iterator rbegin() const;
-        const_reverse_iterator rend() const;
+        const_reverse_iterator crbegin() const;
+        const_reverse_iterator crend() const;
 };
 
 #include "MutantStack.tpp"
